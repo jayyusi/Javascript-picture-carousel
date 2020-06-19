@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Javascript Picture Carousel</title>
+
+    <!-- todo -->
+    <meta name="image" property="og:image" content="">
+    <meta name="description" property="og:description" content="Javascript Picture Carousel">
+    <meta name="author" content="Mohamad Jayyusi">
+
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="mystylesheet.css">
+
+    <!-- Suez One Google font link -->
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+
+    <!-- font awesome css link -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
+    <script>
+        function showBig(pic){
+            var image = document.getElementById("bigPic");
+            image.classList.add("fade-out");
+            setTimeout(function(){fadeIn(pic);},350);
+        }
+
+        function fadeIn(pic){
+            var image = document.getElementById("bigPic");
+            image.src = pic;
+            image.classList.remove("fade-out");
+            image.classList.add("fade-in");
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <i class="fab fa-js-square" style="font-size: 30px; color: goldenrod; margin-right: 5px;"></i>
+        <span id="title">Javascript Picture Carousel</span>
+    </header>
+
+    <article>
+        <div id="big-pic">
+            <img id="bigPic" class="big-pic" src="images/pic01.jpg" alt="sorry can't show pic">
+
+        </div>
+
+        <div id="small-pics">
+            <img class="small-pic" src="images/pic01.jpg" alt="sorry can't show pic" onmouseover="showBig(this.src)">
+            <img class="small-pic" src="images/pic02.jpg" alt="sorry can't show pic" onmouseover="showBig(this.src)">
+            <img class="small-pic" src="images/pic03.jpg" alt="sorry can't show pic" onmouseover="showBig(this.src)">
+            <img class="small-pic" src="images/pic04.jpg" alt="sorry can't show pic" onmouseover="showBig(this.src)">
+            <img class="small-pic" src="images/pic05.jpg" alt="sorry can't show pic" onmouseover="showBig(this.src)">
+            <img class="small-pic" src="images/pic06.jpg" alt="sorry can't show pic" onmouseover="showBig(this.src)">
+        </div>
+
+
+    </article>
+
+    <div class="myfooter">
+        <small>Designed and Developed by<br />
+            <a href="https://www.linkedin.com/in/mohamad-jayyusi/" target="_blank">Mohamad Jayyusi</a></small>
+    </div>
+
+
+</body>
+
+</html>
